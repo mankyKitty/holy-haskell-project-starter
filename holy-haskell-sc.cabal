@@ -78,3 +78,36 @@ library
   hs-source-dirs:      src
   ghc-options:         -Wall
   default-language:    Haskell2010
+
+executable test-holy-haskell-sc
+  hs-source-dirs:       test
+  ghc-options:          -Wall
+  main-is:              Test.hs
+  default-language:     Haskell2010
+  build-depends:        base == 4.6.*
+                        , Cabal >= 1.16.0
+                        , holy-haskell-sc
+                        , HUnit
+                        , QuickCheck
+                        , smallcheck
+                        , tasty
+                        , tasty-hunit
+                        , tasty-quickcheck
+                        , tasty-smallcheck
+
+test-suite Tests
+  hs-source-dirs:       test
+  ghc-options:          -Wall
+  main-is:              Test.hs
+  Type:                 exitcode-stdio-1.0
+  default-language:     Haskell2010
+  build-depends:        base == 4.6.*
+                        , Cabal >= 1.16.0
+                        , holy-haskell-sc
+                        , HUnit
+                        , QuickCheck
+                        , smallcheck
+                        , tasty
+                        , tasty-hunit
+                        , tasty-quickcheck
+                        , tasty-smallcheck
